@@ -7,7 +7,7 @@ import react from '@vitejs/plugin-react'
 const repoName = 'Courcefigma'
 
 export default defineConfig({
-  base: `/${repoName}/`, // <--- добавляем эту строку
+  base: `/${Courcefigma}/`, // <--- добавляем эту строку
   plugins: [
     react(),
     tailwindcss(),
