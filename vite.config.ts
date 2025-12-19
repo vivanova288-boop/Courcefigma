@@ -1,13 +1,16 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
 import path from 'path'
 
-// имя репозитория на GitHub — СТРОКОЙ
 const repoName = 'Courcefigma'
 
 export default defineConfig({
   base: `/${repoName}/`,
-  plugins: [react()],
+  plugins: [
+    react(),
+    tailwindcss(), // ✅ ВОТ ОНА — КЛЮЧЕВАЯ СТРОКА
+  ],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
